@@ -1,0 +1,46 @@
+.new-todo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+
+  .text {
+    height: 2rem;
+    width: clamp(70%, 500px, 100%);
+    padding: 0 0.3em;
+    border-radius: 0.3em;
+    border: solid 0.15em #eee;
+    background-color: white;
+    outline: none;
+    will-change: color background-color;
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: #ccc;
+    }
+  }
+
+  .send {
+    width: fit-content;
+    display: grid;
+    place-content: center;
+    height: 2rem;
+    padding: 0 0.3em;
+    border-radius: 0.3em;
+    border: solid 0.15em;
+    background-color: white;
+    outline: none;
+    will-change: color background-color;
+    transition: all 0.2s ease;
+    color: $purple;
+    border-color: $purple;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $purple;
+      color: white;
+    }
+  }
+}

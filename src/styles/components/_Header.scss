@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $gradient;
+  background-size: 500%;
+  animation: movingBg 20s ease-out infinite alternate;
+  padding: 2rem;
+
+  h1 {
+    font-family: sans-serif;
+    color: white;
+  }
+
+  @keyframes movingBg {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}

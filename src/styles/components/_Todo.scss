@@ -1,0 +1,65 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3em;
+  padding: 0.4em 0.7em;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  .content {
+    width: 100%;
+
+    input {
+      width: 100%;
+      border: none;
+      border-radius: 0.3em;
+      padding: 0.5ch 1ch;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.1em;
+    
+    button {
+      display: grid;
+      place-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.3em;
+      border: solid 0.15em;
+      background-color: white;
+      outline: none;
+      will-change: color background-color;
+      transition: all 0.2s ease;
+    }
+    
+    .check-icon {
+      color: $blue;
+      border-color: $blue;
+
+      &:hover {
+        color: white;
+        background-color: $blue;
+      }
+    }
+    
+    .delete-icon {
+      color: $pink;
+      border-color: $pink;
+      
+      &:hover {
+        color: white;
+        background-color: $pink;
+      }
+    }
+  }
+
+  &.done {
+    opacity: 0.5;
+  }
+}
